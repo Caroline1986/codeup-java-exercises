@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -20,7 +18,10 @@ public class MethodsExercises {
 
         factorial(1);
 
+        rollDice();
+
     }
+
 
     private static int modulus(int i, int i1) {
         return i % i1;
@@ -91,13 +92,38 @@ public class MethodsExercises {
                 output += " X " + i;
                 System.out.printf("%d%s = %d\n", i, output, fact);
             }
-//            System.out.print(num1 + "! = " + fact);
-//            return fact;
+            System.out.print(num1 + "! = " + fact);
+            return fact;
         } else {
-            System.out.println("Make Sure 3 Things: Number between 1-10, Press 1 for Yes, Profit");
+            System.out.println("");
             factorial(num1);
         }
         return num1;
+    }
+
+    ;
+
+
+            public static void rollDice() {
+                Scanner scDice = new Scanner(System.in);
+                long output = 0;
+                while (true) {
+                    System.out.printf("How many sides does each die have? \t");
+                    long userDiceInput = scDice.nextLong();
+                    long die1Value = randomLong(1, userDiceInput);
+                    long die2Value = randomLong(1, userDiceInput);
+                    System.out.printf("Die 1: %d\nDie 2: %d\nRoll: %d\n", die1Value, die2Value, die1Value + die2Value);
+                    System.out.print("roll again?");
+                    String rollAgain = scDice.next();
+                    if (!rollAgain.equalsIgnoreCase("yes")) {
+                        output = die1Value + die2Value;
+                        break;
+                    };
+                };
+            }
+
+    public static long randomLong(long left, long right) {
+        return left + (long) (Math.random() * (right - left));
     }
 
 
