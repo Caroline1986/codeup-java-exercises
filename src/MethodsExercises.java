@@ -148,27 +148,27 @@ public class MethodsExercises {
  }
 
 
-//            public static void rollDice() {
-//                Scanner scDice = new Scanner(System.in);
-//                long output = 0;
-//                while (true) {
-//                    System.out.printf("How many sides does each die have? \t");
-//                    long userDiceInput = scDice.nextLong();
-//                    long die1 = randomLong(1, userDiceInput);
-//                    long die2 = randomLong(1, userDiceInput);
-//                    System.out.printf("Die 1: %d\nDie 2: %d\nRoll: %d\n", die1, die2, die1 + die2);
-//                    System.out.print("roll again?");
-//                    String rollAgain = scDice.next();
-//                    if (rollAgain.equalsIgnoreCase("no")) {
-//                        output = die1 + die2;
-//                        break;
-//                    };
-//                };
-//            }
-//
-//    public static long randomLong(long left, long right) {
-//        return left + (long) (Math.random() * (right - left));
-//    }
+            public static void rollDice() {
+                Scanner scDice = new Scanner(System.in);
+                long output = 0;
+                while (true) {
+                    System.out.printf("How many sides does each die have? \t");
+                    long userDiceInput = scDice.nextLong();
+                    long die1 = randomLong(1, userDiceInput);
+                    long die2 = randomLong(1, userDiceInput);
+                    System.out.printf("Die 1: %d\nDie 2: %d\nRoll: %d\n", die1, die2, die1 + die2);
+                    System.out.print("roll again?");
+                    String rollAgain = scDice.next();
+                    if (rollAgain.equalsIgnoreCase("no")) {
+                        output = die1 + die2;
+                        break;
+                    };
+                };
+            }
+
+    public static long randomLong(long left, long right) {
+        return left + (long) (Math.random() * (right - left));
+    }
 
 
 }
