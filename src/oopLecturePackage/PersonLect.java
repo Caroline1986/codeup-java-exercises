@@ -2,7 +2,7 @@ package oopLecturePackage;
 
 import javax.sound.midi.Soundbank;
 
-public class Person {
+public class PersonLect {
     public String firstName = "Unknown";//<--add what variable ='s to avoid null...will get "unknown" instead
     public String lastName;
     public int age;
