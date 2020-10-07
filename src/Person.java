@@ -47,8 +47,8 @@ public class Person {//<--a class needs a constructor. If not made..a default co
 
     ////TODO: print a message to the console using the person's name
     public void sayHello(){
-        System.out.println("This is, " +this.name);
+        System.out.println("This is,\n " +this.name);
         //or
-        System.out.printf("This is %s", this.name);//<--use printf if using %s...
+        System.out.printf("This is %s\n", this.name);//<--use printf if using %s...
     }
 }
