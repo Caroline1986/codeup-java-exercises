@@ -53,10 +53,10 @@ public class ArraysLec {
         System.out.println("Arrays.toString(numbers) = " + Arrays.toString(numbers));
 
 //        String[] copyOfNames = new String[names.length + 1];//<--this is the same as bottom ex of copy but we will need to enter in names manually.
-        String[] copyOfNames = Arrays.copyOf(names, names.length);
+        String[] copyOfNames = Arrays.copyOf(names, names.length + 1);
 
         System.out.println("copyOfNames.length = " + copyOfNames.length);
-//        copyOfNames[3] = "Justin";
+        copyOfNames[3] = "Justin";
         System.out.println("Arrays.toString(copyOfNames) = " + Arrays.toString(copyOfNames));
 
         //visualize as a spreadsheet with an x(horizontal) and y(vertical) axis
