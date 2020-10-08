@@ -1,7 +1,9 @@
+import java.util.Random;
+
 public class ServerNameGenerator {
     //    Create two arrays whose elements are strings: one with at least 10 adjectives, another with at least 10 nouns.
     public static String[] adjectives = {
-            ("machiavellian"),
+            ("machiavellian"),//<-- do not need parenthesis
             ("voluble"),
             ("ubiquitous"),
             ("stupendous"),
@@ -27,23 +29,34 @@ public class ServerNameGenerator {
     };
 
     //    create a method that will return a random element from an array of strings
-    public static String randomElement (String[] arry1){
+    public static String randomElement(String[] arry1) {
         int i = arry1.length;
-        int randomElement = (int) Math.floor(Math.random()* i);
+        int randomElement = (int) Math.floor(Math.random() * i);
         return arry1[randomElement];
     }
 
-//Add a main method, and inside of your main method select and random noun and adjective and hyphenate the combination and display the generated name to the user.
+    //Add a main method, and inside of your main method select and random noun and adjective and hyphenate the combination and display the generated name to the user.
     public static void main(String[] args) {
-        for (int i = 0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             randomServerName(adjectives, nouns);
         }
     }
 
-
-    public static String randomServerName (String[] arry1, String[] arry2){
+    public static String randomServerName(String[] arry1, String[] arry2) {
         String serverName = ("Your Random Server name is: \n" + randomElement(arry1).toUpperCase() + "-" + randomElement(arry2).toUpperCase());
         System.out.println(serverName);
         return serverName;
     }
+
+//    //or//
+//    public static void main(String[] args) {
+//        System.out.println("Here is your server name");
+//        System.out.println(getWord(adjectives) + " " + getWord(nouns));
+//    }
+//
+//    public static String[] getWord(String[] words) {
+//        Random rnd = new Random();
+//        int randomIndex = rnd.nextInt(words.length);
+//        return words[randomIndex];
+//    }
 }
