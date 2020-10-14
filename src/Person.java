@@ -2,7 +2,7 @@
 
 public class Person {//<--a class needs a constructor. If not made..a default constructor will be made by intelij
     private String name;
-
+    protected String firstName;
     public static void main(String[] args) {//<--main can be placed at top(here) or below.
 //        Person caroline = new Person("Caroline");//<--creates object with new instance of Person
 //        System.out.println("caroline's name = " + caroline.getName()); //<--get's name
