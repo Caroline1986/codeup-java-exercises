@@ -59,11 +59,26 @@ public class Input {
     public int getInt(){
         return  getInt("Please enter a number");
     }
+//    public int getInt(String prompt) {
+//        System.out.println(prompt);
+//        String input = scanner.nextLine();
+//        int num = Integer.parseInt(input);
+//        return num;
+//    }
+
     public int getInt(String prompt) {
-        System.out.println(prompt);
-        String input = scanner.nextLine();
-        int num = Integer.parseInt(input);
-        return num;
+        boolean loopAgain = true;
+        int output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Integer.valueOf(this.scanner.next());
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
+        return output;
     }
 
 
@@ -76,10 +91,24 @@ public class Input {
         return userInput;
     }
 
-    public double getDouble() {
-        System.out.print("Enter a number");
-        String input = scanner.nextLine();
-        return this.scanner.nextDouble();
+//    public double getDouble() {
+//        System.out.print("Enter a number");
+//        String input = scanner.nextLine();
+//        return this.scanner.nextDouble();
+//    }
+    public double getDouble(String prompt) {
+        boolean loopAgain = true;
+        double output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Double.valueOf(this.scanner.next());
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
+        return output;
     }
 
 

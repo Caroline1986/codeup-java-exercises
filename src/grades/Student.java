@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Student {
     private String name;
     private String gitHubName;
-    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> grades;
 
 
 
