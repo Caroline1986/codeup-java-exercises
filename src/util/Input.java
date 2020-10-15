@@ -96,20 +96,19 @@ public class Input {
 //        String input = scanner.nextLine();
 //        return this.scanner.nextDouble();
 //    }
-    public double getDouble(String prompt) {
-        boolean loopAgain = true;
-        double output = 0;
-        do {
-            try {
-                System.out.printf("%s\n", prompt);
-                output = Double.valueOf(this.scanner.next());
-                loopAgain = false;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } while (loopAgain);
-        return output;
-    }
-
+public double getDouble(String prompt) {
+    boolean loopAgain = true;
+    double output = 0;
+    do {
+        try {
+            System.out.printf("%s\n", prompt);
+            output = Double.valueOf(this.scanner.next());
+            loopAgain = false;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } while (loopAgain);
+    return output;
+}
 
     }
