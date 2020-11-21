@@ -78,9 +78,7 @@ public class ArraysLec {
             System.out.println();
         }
 
-//        for (int x = 0; x < matrix.length; x++) {
-//
-//        }
+
         System.out.println("---+---+---+");
 
         for (Person person : persons){//<--reference persons in main
@@ -88,3 +86,6 @@ public class ArraysLec {
         }
     }
 }
+//        for (int x = 0; x < matrix.length; x++) {
+//
+//        }

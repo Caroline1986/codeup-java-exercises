@@ -13,7 +13,7 @@ public class Bob {
 
             if (userInput.endsWith("?")) {
                 System.out.println(question);
-            } else if (userInput.endsWith("!")) {
+            } else if (userInput.endsWith("! || .")) {
                 System.out.println(exclamation);
             } else if (userInput.length() == 0) { //<--or (userInput.equals(""))
                 System.out.println(empty);

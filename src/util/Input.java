@@ -28,7 +28,7 @@ public class Input {
         return yesNo("Enter yes or no");
     }
 
-    public boolean yesNo(String prompt){
+    public boolean yesNo(String prompt) {
         System.out.println("Yay or Nay?");
         String userInput = this.scanner.next();
         return userInput.trim().equalsIgnoreCase("yay") || userInput.trim().toLowerCase().equals("y");
@@ -56,8 +56,8 @@ public class Input {
         return userInput;
     }
 
-    public int getInt(){
-        return  getInt("Please enter a number");
+    public int getInt() {
+        return getInt("Please enter a number");
     }
 //    public int getInt(String prompt) {
 //        System.out.println(prompt);
@@ -91,24 +91,24 @@ public class Input {
         return userInput;
     }
 
-//    public double getDouble() {
+    //    public double getDouble() {
 //        System.out.print("Enter a number");
 //        String input = scanner.nextLine();
 //        return this.scanner.nextDouble();
 //    }
-public double getDouble(String prompt) {
-    boolean loopAgain = true;
-    double output = 0;
-    do {
-        try {
-            System.out.printf("%s\n", prompt);
-            output = Double.valueOf(this.scanner.next());
-            loopAgain = false;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    } while (loopAgain);
-    return output;
-}
-
+    public double getDouble(String prompt) {
+        boolean loopAgain = true;
+        double output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Double.valueOf(this.scanner.next());
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
+        return output;
     }
+
+}

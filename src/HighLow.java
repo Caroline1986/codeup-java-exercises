@@ -4,10 +4,12 @@ public class HighLow {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int range = 100 - 1 + 1;
+//        int range = 100 - 1 + 1;
+        int range = 200;
         int numberToGuess = (int) ((Math.random() * range) + 1);
-//        System.out.println("numberToGuess = " + numberToGuess);
-        int counter = 0;
+        System.out.println("numberToGuess = " + numberToGuess);
+//        int counter = 0;
+        int counter = 1000;
         while (true) {
             counter++;
 
